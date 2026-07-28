@@ -23,10 +23,3 @@ This project facilitates the extraction and processing of facial features from v
 ├── facecap.ipynb      # Exploration and visualization notebook
 └── requirements.txt
 ```
-
-## Usage
-1. Initialize the capture module:
-   
-```bash
-   python facecap.py
-
