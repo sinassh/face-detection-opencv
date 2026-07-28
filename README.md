@@ -18,10 +18,11 @@ This project facilitates the extraction and processing of facial features from v
 - Jupyter Notebooks
 
 ## Project Structure
-text
+```text
 ├── facecap.py         # Core engine for face capture
 ├── facecap.ipynb      # Exploration and visualization notebook
 └── requirements.txt
+```
 
 ## Usage
 1. Initialize the capture module:
