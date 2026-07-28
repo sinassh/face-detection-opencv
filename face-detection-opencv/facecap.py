@@ -11,15 +11,15 @@ smile_cascade = cv2.CascadeClassifier(smile_cascade_path)
 
 #verify successful loading
 if face_cascade.empty():
-    raise IOError(f"❌ Failed to load face cascade at: {face_cascade_path}")
+    raise IOError(f" Failed to load face cascade at: {face_cascade_path}")
 if smile_cascade.empty():
-    raise IOError(f"❌ Failed to load smile cascade at: {smile_cascade_path}")
+    raise IOError(f" Failed to load smile cascade at: {smile_cascade_path}")
 
 #opening webcam
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
-    raise IOError("❌ Could not access the camera. Check your permissions or drivers.")
+    raise IOError(" Could not access the camera. Check your permissions or drivers.")
 
 #optional choice(set frame size for better performance)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
@@ -29,7 +29,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("⚠️ Frame not captured. Camera might be disconnected.")
+        print(" Frame not captured. Camera might be disconnected.")
         break
 
     frame = cv2.flip(frame, 1)
@@ -78,7 +78,7 @@ while True:
 
     #press (q) to quit
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        print("✅ Program exited successfully.")
+        print(" Program exited successfully.")
         break
 
 #release resources
